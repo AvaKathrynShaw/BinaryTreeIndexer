@@ -1,0 +1,43 @@
+-bash: ah: command not found
+-bash-4.1$ vi newBlah
+-bash-4.1$ ls
+a.out  blah  main1.o  main.c  main.o  newBlah  testingText  wordstat.c  wordstat.h
+-bash-4.1$ ls
+a.out  blah  main1.o  main.c  main.o  newBlah  testingText  wordstat.c  wordstat.h
+-bash-4.1$ ls
+a.out  blah  fileFunctions.c  main1.o  main.c  main.o  newBlah  testingText  wordstat.c  wordstat.h
+-bash-4.1$ gcc -o fileFunctions.o fileFunctions.c
+fileFunctions.c: In function ‘freeStringArray’:
+fileFunctions.c:107: error: ‘for’ loop initial declarations are only allowed in C99 mode
+fileFunctions.c:107: note: use option -std=c99 or -std=gnu99 to compile your code
+fileFunctions.c: In function ‘getOutStream’:
+fileFunctions.c:119: error: ‘for’ loop initial declarations are only allowed in C99 mode
+fileFunctions.c: In function ‘parseArgs’:
+fileFunctions.c:156: error: ‘for’ loop initial declarations are only allowed in C99 mode
+fileFunctions.c: In function ‘writeFiles’:
+fileFunctions.c:322: error: ‘for’ loop initial declarations are only allowed in C99 mode
+-bash-4.1$ ls
+a.out  blah  fileFunctions.c  main1.o  main.c  main.o  newBlah  testingText  wordstat.c  wordstat.h
+-bash-4.1$ gcc -Wall -c99 -o fileFunctions.o filefunctions.c
+gcc: filefunctions.c: No such file or directory
+gcc: unrecognized option '-c99'
+gcc: no input files
+-bash-4.1$ gcc -Wall -c99 -o fileFunctions.o fileFunctions.c
+gcc: unrecognized option '-c99'
+fileFunctions.c: In function ‘freeStringArray’:
+fileFunctions.c:107: error: ‘for’ loop initial declarations are only allowed in C99 mode
+fileFunctions.c:107: note: use option -std=c99 or -std=gnu99 to compile your code
+fileFunctions.c: In function ‘getOutStream’:
+fileFunctions.c:119: error: ‘for’ loop initial declarations are only allowed in C99 mode
+fileFunctions.c: In function ‘parseArgs’:
+fileFunctions.c:156: error: ‘for’ loop initial declarations are only allowed in C99 mode
+fileFunctions.c: In function ‘writeFiles’:
+fileFunctions.c:322: error: ‘for’ loop initial declarations are only allowed in C99 mode
+-bash-4.1$ cc -std=c99 fileFunctions.c -o fileFunctions.o
+-bash-4.1$ ls
+a.out  blah  fileFunctions.c  fileFunctions.o  main1.o  main.c  main.o  newBlah  testingText  wordstat.c  wordstat.h
+-bash-4.1$ ./fileFunctions.o testingText
+-bash-4.1$ ls
+a.out  blah  fileFunctions.c  fileFunctions.o  main1.o  main.c  main.o  newBlah  testingText  wordstat.c  wordstat.h
+-bash-4.1$ ./fileFunctions.o
+-bash-4.1$ 

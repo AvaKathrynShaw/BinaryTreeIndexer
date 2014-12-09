@@ -1,0 +1,285 @@
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <ctype.h>
+#include "wordstat.h"
+#include "wordstat.c"
+#include <string.h>
+#include <strings.h>
+#include <ctype.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <dirent.h>
+#include <sys/types.h>
+#include <unistd.h>
+
+
+
+    /* MAIN VARIABLES */
+    struct wordnode* pointer; /*POINTS TO WORD POS.*/
+    struct wordnode* filePointer;
+    struct wordnode* word; /*STORES WORD*/
+    struct wordnode* currentFile; /*Stores filename*/
+    struct charnode* pos; /*POSITION IN TREE*/
+    struct varnode* test; /* TEST VARIATION*/
+    struct varnode* lag;
+    int i; /*COUNTER*/
+    int j; /*COUNTER*/
+    struct charnode* head;
+    FILE* thefile;
+    char c;
+    char *fileName;
+    char *writeToFileName;
+    DIR* dp = NULL;
+ 	 struct dirent *dptr = NULL;
+ 	 struct stat statbuf;
+ 	 FILE* fp;
+ 	 int flag=0;
+
+int process(char* fileName );
+
+
+
+
+void dTraverse(char* file){
+
+    if((dp = opendir(file)) ==NULL ){ //if file
+		//error
+    	return;
+    }
+		chdir(file);
+ 		while((dptr = readdir(dp)) != NULL){ //if directory
+ 			 lstat(dptr->d_name,&statbuf);
+ 			if(S_ISDIR(statbuf.st_mode)){
+ 				if(strcmp(".", dptr->d_name)==0 || strcmp("..",dptr->d_name)==0){
+ 					continue;
+ 				}
+       		printf(" [%s] ",dptr->d_name); //if idr 
+       		printf("its a directory\n");
+ 			dTraverse(dptr->d_name);
+
+     		}//not dir
+       		printf("not a directory\n");
+       		process(dptr->d_name);
+       		flag=1;
+		}
+		chdir("..");
+		closedir(dp);
+}
+
+
+
+int main (int argc, char **argv)
+{
+
+    
+    /*need to change to 3 after multiple file code is added*/
+	/*if (argc != 3)
+	{
+		fprintf (stderr, "THIS PROGRAM REQUIRES TWO ARGUMENTS. Please try again. Type -h for more information.\n");
+		return 0;
+	}*/
+	
+	
+    
+	/*need to change how this works later!*/
+	if (strcmp(argv[1], "-h") == 0)
+	{
+		fprintf (stdout, "\n When using indexer, follow the command with an arguement\nwhere the argument is either the name of the file that wordstat should process,\nWhen used with a valid file name, wordstat should find and output \nall the unique words in the file in lexicographical order,\nalong with the total number of times each word appears (case-insensitive) \nand a count of different case-sensitive versions of the word. Try it out!\n");
+		return 0;
+	}
+
+    /*code goes here to deal with multiple file names and directories*/
+
+	char *fname = argv[1];
+	char *fileName =argv[2]; //directory or filename 
+	dTraverse(fileName); //go through directories
+	printf("%i\n",flag );
+
+	if (flag==0 ){
+ 		//fp = fopen(argv[2], "r");
+ 		process(fileName);
+		}
+
+
+}
+int process (char* fileName){
+
+    /*sets the file name*/
+    fileName=fileName;
+    fprintf(stdout, "Read in filename: %s\n", fileName);
+
+    /*BEFORE OPENING FILE, STORE CURRENT FILE NAME IN A WORD NODE*/
+   
+    if(fileName != NULL)
+    {
+    	currentFile = newwordnode();
+    	filePointer = currentFile;
+    	i=0;
+
+    	while (fileName[i]!= 0)
+    	{
+    		if(i==39)
+    		{
+    			filePointer->next = newwordnode();
+    		}
+    		if(i == 40)
+    		{
+    			filePointer=filePointer->next;
+    			i=0;
+    		}
+    		filePointer->word[i]=fileName[i];
+    		i++;
+
+    	}
+
+    }
+
+    /*testing file word node is stored correctly*/
+
+    fprintf(stdout, "%s\n", filePointer->word);
+
+    
+	thefile = fopen(fileName,"r");
+
+
+	if (thefile == NULL)
+	{
+		fprintf (stderr, "CANNOT READ IN FILE, PLEASE CHECK NAME AND TRY AGAIN \n");
+		fprintf (stderr, "%s\n", fileName);
+		/*fprintf (stderr, "%s\n", argv[1]);*/
+		return 0;
+	}
+    
+	
+	head=newcharnode();
+	c=fgetc(thefile);
+
+	/*Retreive File name and store in a wordnode*/
+
+    
+	/* READFILE*/
+	while (c != EOF)
+	{
+		/*RETREIVE WORD*/
+		if (isalpha(c)!=0)
+		{
+			word = newwordnode();
+			pointer=word;
+			i=0;
+			while(isalnum(c)!=0)
+			{
+				if(i==39)
+				{
+					pointer->next = newwordnode();
+				}
+				if(i==40)
+				{
+					pointer=pointer->next;
+					i=0;
+				}
+                
+                pointer->word[i]=c;
+                i++;
+				
+				
+				c=fgetc(thefile);
+			}
+
+
+			
+            
+            
+			/*ADDS WORD TO TREE*/
+			c=word->word[0];
+			pointer=word;
+			pos=head;
+			i=0;
+			while (c!='\0')
+			{
+				if (pos->next==NULL)
+				{
+					pos->next=newnextarray();
+				}
+				if (isalpha(c)!=0)
+				{
+					if(pos->next->next[tolower(c)-'a']==NULL)
+					{
+						pos->next->next[tolower(c)-'a']=newcharnode();
+					}
+					pos = pos->next->next[tolower(c)-'a'];
+				}
+				if (isdigit(c)!=0)
+				{
+					if(pos->next->next[tolower(c)-'0'+26]==NULL)
+					{
+						pos->next->next[tolower(c)-'0'+26]=newcharnode();
+					}
+					pos = pos->next->next[tolower(c)-'0'+26];
+				}
+				i++;
+				if(i==40)
+				{
+					i=0;
+					pointer=pointer->next;
+				}
+				c=pointer->word[i];
+			}
+			pos->occurcount++;
+			
+			/* SEARCH AND CREATE VARIATIONS */
+			if(pos->variations==NULL)
+			{
+				pos->variations=newvarnode();
+				pos->variations->thisvar=word;
+				pos->variations->next=newvarnode();
+				pos->variations->next->thisvar=filePointer;
+				pos->variations->next->fileOccurCount++;
+				/*pos->varcount++;*/
+                
+			}else
+			{
+				test=pos->variations->next;
+				i=0;
+				while(test != NULL)
+				{
+					lag=test;
+					currentFile=test->thisvar;
+					if(processStr(currentFile,filePointer)==1)
+					{
+					
+						i=1;
+						pos->variations->next->fileOccurCount++;
+						/*freewordnode(test);*/
+						break;
+					}
+					test=test->next;
+				}
+				if(i==0)
+				{
+					lag->next=newvarnode();
+					lag->next->thisvar=filePointer;
+					/*pos->varcount++;*/
+				}
+			}
+		}
+		c=fgetc(thefile);
+	}
+	/*EOF IN*/
+	i=fclose(thefile);
+	if (i!=0)
+	{
+		fprintf(stderr, "FILE CLOSE FAILURE");
+	}
+
+
+    
+    
+	/*PRINT AND FREE */
+	printResult(head);
+	freecharnode(head);
+    
+    return 0;
+}
+
+

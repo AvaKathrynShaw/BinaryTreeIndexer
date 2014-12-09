@@ -1,0 +1,335 @@
+Hello Ava Shaw,
+
+Thank you for your order with HostGator.com!
+
+You can login to our billing system at http://gbclient.hostgator.com/login, using the email address we sent this email to, and the password 2a4aVQH79jOk
+Reseller Plan: Aluminum
+
+    Your Control Panel:  https://intrigue.websitewelcome.com:2087
+    Your Domain:         avakathrynshaw.com
+    Your Username:       aks174
+    Your Password:       AAufz8L2kKnX8mI8
+    Your IP:             192.185.179.136
+    Your 1st Nameserver: ns503.websitewelcome.com ()
+    Your 2nd Nameserver: ns504.websitewelcome.com ()
+    Your nameservers that must be registered are:
+
+    ns1.avakathrynshaw.com ()
+    ns2.avakathrynshaw.com ()
+
+For directions on how to register your name servers, please read:
+http://www.hostgator.com/privatenameservers.html
+
+Please read http://www.hostgator.com/resellerinfo.html for all the information needed to manage your account.
+
+Congratulations!
+
+Your installation is ready. You can access it now by going here. If there is any login information, it will have been sent to the email address you provided.
+Admin Area: http://avakathrynshaw.com/wp-admin
+Username: admin
+Password: zqyvdfUXeLxcWQ93 **new password Pappy13492
+
+
+
+We are now packing WordPress with WP-Super-Cache and have it enabled with recommended settings to help maintain solid performance from your WordPress installations!**
+
+
+For more information on this plugin and its configuration please visithttp://wordpress.org/extend/plugins/wp-super-cache/ 
+
+
+**WP-Super-Cache can be disabled by going to your plugin section of your WordPress Dashboard and deactivating the plugin.
+
+
+
+
+
+
+
+
+
+We are happy to inform you that your Virtual Private Server has been configured and is ready for use!
+
+
+You can login to our billing system at http://gbclient.hostgator.com/login using your email address and the password 2a4aVQH79jOk
+
+Power Panel (VZ):   https://216.172.181.70:4643/vz/cp
+Your Domain:     ava.avakathrynshaw.com
+Your Username:  root
+Your Password:  Ffw7oplJgwHD
+Your site's IP address:
+216.172.181.70
+
+Since you have chosen to install cPanel on your server, your information is below:
+WHM Address: http://216.172.181.70:2086
+Username: root
+Password: Ffw7oplJgwHD
+cPanel License ID: 20562565
+
+Your name servers that must be registered are:
+ns1.avakathrynshaw.com (216.172.181.70)
+ns2.avakathrynshaw.com (216.172.181.69)
+
+For directions on how to register your name servers (required), please read:
+http://www.hostgator.com/privatenameservers.html
+
+If you have requested cPanel please read http://www.hostgator.com/resellerinfo.html for all the information needed to manage your server, including WHM and cPanel.
+
+Visit the HostGator Knowledgebase and Video Tutorials section for solutions to commonly asked questions:
+http://support.hostgator.com/
+http://www.hostgator.com/tutorials.shtml
+
+If you have any questions, comments, or concerns, feel free to email support@hostgator.com.
+
+Best regards,
+HostGator.com
+
+
+
+192.185.179.136
+
+
+
+Congratulations!
+Your installation is ready. You can access it now by going here. If there is any login information, it will have been sent to the email address you provided.
+
+Admin Area: http://avakathrynshaw.com/wp-admin
+Username: aks
+Password: Sog9Ly04JcdoK6av
+
+
+We are now packing WordPress with WP-Super-Cache and have it enabled with recommended settings to help maintain solid performance from your WordPress installations!**
+
+
+For more information on this plugin and its configuration please visithttp://wordpress.org/extend/plugins/wp-super-cache/ 
+
+
+**WP-Super-Cache can be disabled by going to your plugin section of your WordPress Dashboard and deactivating the plugin.
+
+
+
+
+
+Congratulations!
+
+Your installation is ready. You can access it now by going here. If there is any login information, it will have been sent to the email address you provided.
+
+Admin Area: http://avakathrynshaw.com/wp-admin
+Username: Ava
+Password: HXadsfhQpctT6ir
+
+
+We are now packing WordPress with WP-Super-Cache and have it enabled with recommended settings to help maintain solid performance from your WordPress installations!**
+
+
+For more information on this plugin and its configuration please visit http://wordpress.org/extend/plugins/wp-super-cache/ 
+
+
+**WP-Super-Cache can be disabled by going to your plugin section of your WordPress Dashboard and deactivating the plugin.
+
+
+
+Congratulations!
+Your installation is ready. You can access it now by going here. If there is any login information, it will have been sent to the email address you provided.
+
+Admin Area: http://phoenix-essentials.com/wp-admin
+Username: Ava
+Password: z6gHFJPFNzdWO3G
+
+
+We are now packing WordPress with WP-Super-Cache and have it enabled with recommended settings to help maintain solid performance from your WordPress installations!**
+
+
+For more information on this plugin and its configuration please visithttp://wordpress.org/extend/plugins/wp-super-cache/ 
+
+
+**WP-Super-Cache can be disabled by going to your plugin section of your WordPress Dashboard and deactivating the plugin.
+
+
+
+Hello Ava,
+
+Thank you for choosing HostGator! The following domain(s) have been successfully registered:
+
+pheonix-healing.com
+
+You can manage your domains by logging into: https://register.hostgator.com/?manage
+
+Please note: By default, your domain is set to our default nameservers, unless you specified nameservers during the order process.
+
+If you are interested in purchasing hosting today, please login to https://gbclient.hostgator.com/ with the same email and password and click Add New Package in the left sidebar.
+
+The below pages are available for your reference.
+
+General Reference Guide: http://gtrkb.com//ReferenceGuide
+Domain Management Guide: http://gtrkb.com//ManageDomains
+Automated Renewal Policy & Guide: http://gtrkb.com//Renewal
+Expiration Policy & Guide: http://gtrkb.com//Expiration
+
+
+If you need any additional assistance, please visit our support page at http://support.hostgator.com
+
+
+Regards,
+
+HostGator.com
+
+
+
+Account Creation Status: ok (Account Creation Ok)
+
+Checking input data......Done
+
+Validating system setup......Done
+
+Rebuilding IP Pool...System has 1 free ip.
+...Done
+
+Validating IP......Done
+
+Validating Username......Done
+
+Validating Contact Email......Done
+
+Ensuring services are online......Done
+
+WWWAcct 12.5.0 (c) 2014 cPanel, Inc....
+
+Dns Zone check is enabled.
++===================================+
+| New Account Info                  |
++===================================+
+| Domain: pheonix-healing.com
+| Ip: 216.172.181.70 (n)
+| HasCgi: y
+| UserName: pheonixhealing
+| PassWord: pa55w0rd
+| CpanelMod: x3
+| HomeRoot: /home
+| Quota: 1000 Meg
+| NameServer1: ns1.avakathrynshaw.com
+| NameServer2: ns2.avakathrynshaw.com
+| NameServer3: 
+| NameServer4: 
+| Contact Email: avakathrynshaw@gmail.com
+| Package: aks174_My Package
+| Feature List: default
+| Language: en
++===================================+
+...Done
+
+Running pre creation script (/usr/local/cpanel/scripts/prewwwacct)......Done
+
+Adding User...Removing Shell Access (n)
+Success...Done
+
+Using Universal Quota Support (quota=1024000)
+Adding Entries to userdata......Done
+
+Updating the userdata cache......Done
+
+Setting up Mail & Local Domains...localdomains...valiases ...vdomainaliases...vfilters......Done
+
+Configuring DNS...Bind reconfiguring on ava using rndc
+Zone pheonix-healing.com has been successfully added
+...Done
+
+Updating Authentication Databases......Done
+
+Adding Entries to httpd.conf......Done
+
+Restarting apache......Done
+
+Setting passwords...Password for “pheonixhealing” has been changed.
+Updating FTP passwords for pheonixhealing
+FTP password files updated.
+FTP vhost passwords synced
+...Done
+
+Updating the dedicated IP address usage cache......Done
+
+Verifying MX Records and Setting up Databases...Reconfiguring Mail Routing:
+LOCAL MAIL EXCHANGER: This server will serve as a primary mail exchanger for pheonix-healing.com's mail.:
+ This configuration has been manually selected.
+
+...Done
+
+Setting up Proxy Subdomains......Done
+
+Generating and installing DKIM keys......Done
+
+Bind reloading on ava using rndc zone: [pheonix-healing.com]
+Sending Account Information......Done
+
+System has 1 free ip.
+Running post creation scripts (/usr/local/cpanel/scripts/legacypostwwwacct, /usr/local/cpanel/scripts/postwwwacct, /usr/local/cpanel/scripts/postwwwacctuser)...
+Running postwwwacct......Done
+
+wwwacct creation finished
+Setting up Domain Pointers......Done
+
+Setting Reseller Privs......Done
+
+Account Creation Complete!!!...Account Creation Ok...Done
+
+
+Congratulations!
+
+Your installation is ready. You can access it now by going here. If there is any login information, it will have been sent to the email address you provided.
+
+Admin Area: http://pheonix-healing.com/wp-admin
+Username: Admin
+Password: 83In5RG4l5qIC
+
+
+We are now packing WordPress with WP-Super-Cache and have it enabled with recommended settings to help maintain solid performance from your WordPress installations!**
+
+
+For more information on this plugin and its configuration please visit http://wordpress.org/extend/plugins/wp-super-cache/ 
+
+
+**WP-Super-Cache can be disabled by going to your plugin section of your WordPress Dashboard and deactivating the plugin.
+
+
+
+Social Media
+
+
+Tumblr
+
+avakathrynshaw@gmail.com
+Pappy13492
+avasmarketing
+avasmarketing.tumblr.com
+
+
+Tumblr URL: avasmarketing.tumblr.com
+
+Test domain
+
+
+Mailchip
+
+avakathrynshaw@gmail.com
+Pappy13492!
+aks174
+
+Pintrest
+
+avakathrynshaw@gmail.com
+Pappy13492
+pintrest.com/avashawdesign
+
+Twitter
+AvasMarketing
+Avakathrynshaw@gmail.com
+Pappy13492
+https://twitter.com/AvasMarketing
+
+Hootsuite
+
+Avakathyrnshaw@gmail.com
+pappy13492
+
+Twine
+avakathrynshaw@gmail.com
+Pappy13492
